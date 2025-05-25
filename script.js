@@ -1,6 +1,7 @@
 const container = document.getElementById("emote-container");
 
-const exampleEmotes = ["😂", "🔥", "💀", "❤️", "👌", "😎", "🥶", "😡", "😭", "👀"];
+// Simulation d'apparition d'émojis
+const testEmotes = ["😂", "🔥", "💀", "❤️", "👌", "😎", "🥶", "😡", "😭", "👀"];
 
 function spawnEmote(emote) {
   const span = document.createElement("span");
@@ -14,8 +15,8 @@ function spawnEmote(emote) {
   }, 3000);
 }
 
-// Simuler des emotes toutes les 1s (à remplacer par intégration Twitch réelle)
+// Simule l'apparition d'un émoji aléatoire toutes les secondes
 setInterval(() => {
-  const emote = exampleEmotes[Math.floor(Math.random() * exampleEmotes.length)];
+  const emote = testEmotes[Math.floor(Math.random() * testEmotes.length)];
   spawnEmote(emote);
 }, 1000);
